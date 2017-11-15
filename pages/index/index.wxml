@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="section">
+  <swiper indicator-active-color='{{indicatorActiveColor}}' indicator-color="{{indicatorColor}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="url-key" wx:for-index="url-index" wx:for-item="item">
+      <swiper-item bindtap="changeIndicatorDots">
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="section">
+  <view class="item"></view>
+  <block wx:for="{{list}}" wx:key="list-key" wx:for-index="list-index" wx:for-item="date">
+  <view class="box" lazy="loaded" style="background-image: url({{ date.picLinks }});">
+    <view class="Mask"></view> 
+    <view class="news-eye">
+      <view class="title">{{date.title}}</view> 
+      <view class="bottom">
+        <image src="http://image.wx.china.cn/images/lives/huigu_icon2@2x.png" class="tagUrl"> </image>
+        <span class="hits">
+        <image src="../../images/eyes_icon_2x.d816d54.png"> </image>
+        <view class="hits-people">36671</view>
+        </span> 
+
+        <image src="../../images/shijian@2x.7f92b93.png" class="play-icon"> </image>
+        <span>22小时前</span> 
+
+        </view>
+    </view>
+  </view>
+  <view class="item"></view>
+  </block>
+</view>
