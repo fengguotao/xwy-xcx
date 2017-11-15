@@ -16,14 +16,14 @@
     <view class="news-eye">
       <view class="title">{{date.title}}</view> 
       <view class="bottom">
-        <image src="http://image.wx.china.cn/images/lives/huigu_icon2@2x.png" class="tagUrl"> </image>
-        <span class="hits">
+        <image src="{{ date.tagUrl }}" class="tagUrl"> </image>
+        <!--span class="hits">
         <image src="../../images/eyes_icon_2x.d816d54.png"> </image>
         <view class="hits-people">36671</view>
-        </span> 
+        </span--> 
 
         <image src="../../images/shijian@2x.7f92b93.png" class="play-icon"> </image>
-        <span>22小时前</span> 
+        <span>{{ date.beginTime }}</span> 
 
         </view>
     </view>
