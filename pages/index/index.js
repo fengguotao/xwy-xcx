@@ -27,7 +27,7 @@ Page({
         size : 50,
         page : 0
       },
-      method: 'POST',
+      method: 'GET',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },
